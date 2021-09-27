@@ -1,0 +1,15 @@
+n = int(input())
+arr = list(map(int,input().split()))[:n]
+first = arr[0:3]
+last = arr[-3:]
+sum_first = 0
+sum_last = 0
+for i in range(0,len(first)):
+    sum_first = sum_first + first[i]
+for i in range(0,len(last)):
+    sum_last = sum_last + last[i]
+if(sum_first == sum_last):
+    print(1)
+else:
+    print(0)
+    
