@@ -1,0 +1,12 @@
+n = int(input())
+goals = list(map(int,input().split()))
+last_3_team = goals[-3:]
+sum_goal = 0
+net_goal = []
+for i in range(0,len(last_3_team)):
+    sum_goal = sum_goal + last_3_team[i]
+for i in range(0,n):
+    net  = goals[i] - sum_goal
+    net_goal.append(net)
+print(*net_goal)
+
