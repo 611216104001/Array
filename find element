@@ -1,0 +1,10 @@
+nk = list(map(int,input().split()))[:2]
+ele = list(map(int,input().split()))[:nk[0]]
+found = 0
+for i in range(0,nk[0]):
+    if(ele[i] == nk[1]):
+        found = 1
+if(found == 1):
+    print("yes")
+else:
+    print("no")
