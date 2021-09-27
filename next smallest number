@@ -1,0 +1,21 @@
+n = int(input())
+arr = list(map(int,input().split()))[:n]
+small = []
+smallest = 0
+for i in range(0,n):
+    for j in range(i+1,n):
+        if(arr[i] > arr[j]):
+            small.append(arr[j])
+            break
+        else:
+            continue
+for i in range(0,n):
+    for j in range(i+1,n):
+        if(arr[i] < arr[j]):
+            smallest = 1
+        else:
+            smallest = 0
+            break
+    if (smallest == 1):
+        small.append(-1)
+print(*small)
