@@ -1,0 +1,15 @@
+n_stud =list(map(int,input().split()))[:2]
+stud_mark = list(map(int,input().split()))[:n_stud[0]]
+ram_mark = n_stud[1]
+mark = 0
+for i in range(0,n_stud[0]):
+    if(ram_mark == stud_mark[i]):
+        same_mark = i
+        mark = 1
+if(mark == 1):
+    print(same_mark)
+else:
+    print(-1)
+    
+
+        
