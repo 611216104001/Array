@@ -1,0 +1,10 @@
+n = int(input())
+arr = list(map(int,input().split()))[:n]
+for i in range(0,len(arr)):
+    count = arr.count(arr[i])
+    if count == 3:
+        continue
+    else:
+        print(arr[i])
+        break
+
