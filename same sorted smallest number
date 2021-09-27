@@ -1,0 +1,21 @@
+n = int(input())
+arr = list(map(int,input().split()))[:n]
+rev_arr = arr[::-1]
+rep = []
+single_rep = []
+no_rep = []
+for i in range(0,len(rev_arr)):
+    for j in range(i+1,len(rev_arr)):
+        if(rev_arr[i] == rev_arr[j]):
+            rep.append(rev_arr[i])
+            break
+        else:
+            no_rep.append(rev_arr[i])
+            break
+if (len(no_rep) == len(rep)):
+    print(*rep)
+else:
+    non_rep_lst = no_rep + rep
+    print(*non_rep_lst)
+    
+    
