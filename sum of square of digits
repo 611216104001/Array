@@ -1,0 +1,7 @@
+n = int(input())
+sum_sq = 0
+lst = [int(x) for x in str(n)]
+for i in range(0,len(lst)):
+    sum_sq = sum_sq + (lst[i] * lst[i])
+print(sum_sq)
+    
