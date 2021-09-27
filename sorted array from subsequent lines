@@ -1,0 +1,15 @@
+n_array = int(input())
+k_arr = []
+for i in range(0,n_array):
+    val = int(input())
+    arr = list(map(int,input().split()))[:val]
+    n_array = n_array - 1
+    for i in range(0,val):
+        for j in range(i+1,val):
+            if(arr[i] > arr[j]):
+                temp = arr[i]
+                arr[i] = arr[j]
+                arr[j] = temp
+    k_arr = k_arr + arr
+ans = ' '.join(str(x) for x in k_arr)
+print(ans)
