@@ -1,0 +1,28 @@
+n = int(input())
+num = list(map(int,input().split()))[:n]
+length = len(num)
+count = 0
+count_1 = 0
+least = []
+des_least = []
+for i in range(0,n):
+    for j in range(i+1,n):
+        if(num[i] == num[j]):
+            count = count + 1
+    if (count == 0) or (num[i] == 0):
+        least.append(num[i])
+for i in range(0,n-1):
+    if (num[i] == num[length-1]):
+        count_1 = count_1 + 1
+if (count_1 == 0):
+    least.append(num[length-1])
+least_len = len(least)
+for i in range(0,least_len):
+    for j in range(i+1,least_len):
+        if(least[i] < least[j]):
+            temp = least[j]
+            least[j] = least[i]
+            least[i] = temp
+for i in range(0,least_len):
+    des_least.append(least[i])
+print(*des_least)
