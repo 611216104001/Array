@@ -1,0 +1,13 @@
+nk = list(map(int,input().split()))[:2]
+n = nk[0]
+k = nk[1]
+ele = list(map(int,input().split()))[:n]
+count = 0
+for i in range(0,n):
+    if(k == ele[i]):
+        count = count + 1
+count = count - 1
+if count >= 0:
+    print(count)
+else:
+    print(-1)
