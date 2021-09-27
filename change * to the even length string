@@ -1,0 +1,15 @@
+s = str(input())
+char = [str(x) for x in str(s)]
+mid = len(char) / 2
+r_mid = round(mid)
+final = []
+for i in range(0,len(char)):
+    if (i == r_mid - 1) and (len(char) % 2 == 0):
+        final.append('*')
+    elif (i == r_mid):
+        final.append('*')
+    else:
+        final.append(char[i])
+final_str = ''.join(final)
+print(final_str)
+        
