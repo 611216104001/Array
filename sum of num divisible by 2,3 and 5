@@ -1,0 +1,9 @@
+num = int(input())
+array = list(map(int,input().split()))[:num]
+sum_val = 0
+for i in range(0,num):
+    sum_val = sum_val + array[i]
+if (sum_val % 5 == 0) and (sum_val % 2 == 0) and (sum_val % 3 ==0):
+    print(1)
+else:
+    print(0)
