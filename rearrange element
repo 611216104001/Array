@@ -1,0 +1,6 @@
+n = int(input())
+arr = list(map(int,input().split()))[:n]
+rearrange = []
+for i in range(0,n):
+    rearrange.append(arr[arr[i]])
+print(*rearrange)
