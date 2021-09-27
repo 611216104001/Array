@@ -1,0 +1,4 @@
+n = int(input())
+string = list(map(str,input().split()))[:n]
+sort = sorted(string)
+print(*sort)
