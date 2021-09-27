@@ -1,0 +1,20 @@
+y = int(input())
+test_case = list(map(int,input().split()))[:y]
+t = int(input())
+qns = list(map(int,input().split()))[:t]
+count = 0
+occur = []
+for i in range(0,t):
+    for j in range(0,y):
+        if(qns[i] == test_case[j]):
+            count = count + 1
+#    print(count)
+    if (count > 0):
+        occur.append(count)
+        count = 0
+    else:
+        occur.append("Not Present")
+        count = 0
+print(*occur)
+        
+    
