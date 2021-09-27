@@ -1,0 +1,12 @@
+n = int(input())
+ids = list(map(int,input().split()))[:n]
+not_unique = []
+ans = []
+for i in range(0,n):
+    for j in range(i+1,n):
+        if(ids[i] == ids[j]):
+            not_unique.append(ids[i])
+for i in range(0,len(not_unique)):
+    ans.append(not_unique[i])
+print(*ans)
+            
