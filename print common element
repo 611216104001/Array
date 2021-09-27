@@ -1,0 +1,14 @@
+n = int(input())
+arr_1 = list(map(int,input().split()))[:n]
+arr_2 = list(map(int,input().split()))[:n]
+com = []
+for i in range(0,n):
+    for j in range(0,n):
+        if(arr_1[i] == arr_2[j]):
+            com.append(arr_1[i])
+        else:
+            non_com = -1
+if (len(com) != 0):
+    print(*com)
+else:
+    print(-1)
