@@ -1,0 +1,11 @@
+length = int(input())
+str_lst = list(map(str,input().split()))[:length]
+ans = []
+for i in range(0,length):
+    for j in range(i+1,length):
+#        print(i,j)
+        if (str_lst[i] == str_lst[j]):
+            ans.append(j)
+for i in range(0,len(ans)):
+    del str_lst[ans[i]]
+print(*str_lst)
