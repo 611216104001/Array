@@ -1,0 +1,42 @@
+num = list(map(int,input().split()))[:2]
+cons = list(map(int,input().split()))[:num[0]]
+k_value=[]
+n = num[0]
+m = num[1]
+for i in range(0,n-1):
+    if (cons[i] < cons[i+1]):
+        temp = cons[i]
+        cons[i] = cons[i+1]
+        cons[i+1] = temp
+#       print(cons[i])
+#       print(cons[i+1])
+        diff = cons[i] - cons[i+1]
+#       print(diff)
+        temp = cons[i]
+        cons[i] = cons[i+1]
+        cons[i+1] = temp
+#        print(cons[i])
+#        print(cons[i+1])
+    else:
+        diff = cons[i] - cons[i+1]
+#        print(diff)
+    if m >= diff:
+        k_value.append(0)
+    else:
+        k_value.append(1)
+for i in range(0,n):
+    if (i == (n-1)):
+        if cons[0] < cons[n-1]:
+            temp = cons[0]
+            cons[0] = cons[n-1]
+            cons[n-1] = temp
+            print(cons[0])
+            print(cons[n-1])
+            diff = cons[0] - cons[n-1]
+        else:
+            diff = cons[0] - cons[n-1]
+        if m >= diff:
+            k_value.append(0)
+        else:
+            k_value.append(1)
+print(*k_value)
