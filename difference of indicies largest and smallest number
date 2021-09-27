@@ -1,0 +1,14 @@
+n = int(input())
+arr = list(map(int,input().split()))[:n]
+small = min(arr)
+large = max(arr)
+ans = []
+for i in range(0,n):
+    if (arr[i] == large):
+        ans.append(i)
+for i in range(0,n):
+    if (arr[i] == small):
+        ans.append(i)
+for i in range(0,1):
+    sub = ans[i] - ans[i+1]
+print(sub)
